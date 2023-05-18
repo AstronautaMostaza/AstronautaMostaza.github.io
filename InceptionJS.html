@@ -13,7 +13,6 @@
             *{
                 margin: 0;
                 padding: 0;
-                box-sizing: border-box;
                 background-size: cover;
                 background-repeat: no-repeat;
             }
@@ -33,7 +32,7 @@
                 text-align: center;
                 width: 66vw;
                 height: 1395px;
-                background: #fafaf5;
+                background: rgba(245, 245, 250, 0.25);
                 padding: 20px 100px;
                 margin: 50px;
                 border-style: solid;
@@ -61,6 +60,16 @@
             .calif-imdb, .calif-propia{
                 display: inline-block;
                 margin: 0px 25px;
+            }
+            button{
+                display: inline-block;
+                margin: 15px 5px;
+                background: #e63b5d;
+                color: #f5f5fa;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-family: "Outfit";
+                border: none;
             }
         </style>
     </head>
@@ -90,8 +99,10 @@
                 <h2 style="text-align: left;">Imágenes</h2>
                 <hr>
                 <br>
-                <img src="https://street-warrior.ru/800/600/https/fb.ru/misc/i/gallery/51870/1821423.jpg" width="300px" height="200px" alt="Personajes de la película sobre el techo de un edificio viendo cómo se deforma la realidad">
-                <img src="http://2.bp.blogspot.com/_bl5ZnczG4Bs/TEpPtmMXVjI/AAAAAAAAClU/MdL5CGtf0pA/s400/preview-inception-431.jpg" width="300px" height="200px" alt="La famosa escena de Arthur peleando contra enemigos en los pasillos de un hotel, pasillos los cuales están rotando">
+                <img src="https://street-warrior.ru/800/600/https/fb.ru/misc/i/gallery/51870/1821423.jpg" width="400px" height="300px" alt="Personajes de la película sobre el techo de un edificio viendo cómo se deforma la realidad"><br>
+                <button id="anterior">Anterior</button>
+                <button id="siguiente">Siguiente</button><br>
+                <!--<img src="http://2.bp.blogspot.com/_bl5ZnczG4Bs/TEpPtmMXVjI/AAAAAAAAClU/MdL5CGtf0pA/s400/preview-inception-431.jpg" width="300px" height="200px" alt="La famosa escena de Arthur peleando contra enemigos en los pasillos de un hotel, pasillos los cuales están rotando">-->
             </div>
             <div class="trailer">
                 <h2 style="text-align: left;">Trailer</h2>
