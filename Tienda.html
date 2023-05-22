@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+</head>
+<body>
+    <!-- Registro de un producto: Nombre, código, precio, unidades en inventario, descripción-->
+    <form action="#" method="get">
+        <label>Nombre:</label><input type="text" name="nombre" value="Luis"><br>
+        <label>Código</label><input type="text" name="codigo" onchange="funcion()"><br>
+        <label>Precio:</label><input type="number" name="precio"><br>
+        <label>Unidades en inventario:</label><input type="number" name="unidades"><br>
+        <label>Descripción:</label><input type="text" name="descripcion"><br>
+        <input type="submit" value="Registrar producto">
+    </form>
+    <h1 id="mensaje"></h1>
+    <script>
+        getParameter = (key) => {
+            address = window.location.search;
+
+            //Objeto de tipo URLSearchParams
+            parameterList = new URLSearchParams(address);
+
+            //Regresa el valor del parámetro "key"
+            return parameterList.get(key);
+        }
+
+        console.log(getParameter("nombre"));
+        var nombre = getParameter("nombre");
+
+        if (nombre!=null) {
+            document.getElementById("mensaje").innerHTML = "Bienvenido " + nombre;
+        }
+        function funcion() {
+            alert("Se cambió el input Código");
+        }
+    </script>
+</body>
+</html>
