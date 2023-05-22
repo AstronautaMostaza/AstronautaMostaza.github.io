@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="nombres"></h1>
+    <h2 id="apellidos"></h2>
+    <a id="email" href=""></a><br>
+    <a id="telefono" href=""></a>
+    <p id="edad"></p>
+    <script>
+        getParameter = (key) => {
+            address = window.location.search;
+
+            //Objeto de tipo URLSearchParams
+            parameterList = new URLSearchParams(address);
+
+            //Regresa el valor del parámetro "key"
+            return parameterList.get(key);
+        }
+
+        document.getElementById("nombres").innerHTML = "Nombres: " + getParameter("nombres");
+        document.getElementById("apellidos").innerHTML = "Apellidos: " + getParameter("apellidos");
+        document.getElementById("email").innerHTML = "Correo electrónico: " + getParameter("email");
+        document.getElementById("email").href = "mailto:" + getParameter("email");
+        document.getElementById("telefono").innerHTML = "Teléfono: " + getParameter("telefono");
+        document.getElementById("telefono").href = "tel:" + getParameter("telefono");
+
+        var nac_split = getParameter("nacimiento").split('-');
+        document.getElementById("edad").innerHTML = "Edad: " + (2023 - nac_split[0]);
+
+        if (getParameter("contrasena").length < 5) {
+            alert("Su contraseña es insegura");
+        } else {
+            alert("Su contraseña es segura");
+        }
+    </script>
+</body>
+</html>
