@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit&family=Montserrat">
     <title>Formulario</title>
+    <style>
+        body {
+            font-family: Outfit;
+        }
+        legend, h1 {
+            font-family: Montserrat;
+            text-align: center;
+        }
+        #enviar {
+            margin: 15px 5px;
+            background: #1ab5b3;
+            color: #f5f5fa;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
     <h1>Trabajo 7</h1>
     <form action="Bienvenida.html" method="get">
-        <label>Nombres:</label><input type="text" name="nombres"><br>
-        <label>Apellidos:</label><input type="text" name="apellidos"><br>
-        <label>Correo:</label><input type="email" name="email"><br>
-        <label>Fecha de nacimiento:</label><input type="datetime-local" name="nacimiento"><br>
-        <label>Teléfono:</label><input type="tel" name="telefono"><br>
-        <label>Usuario:</label><input type="text" name="usuario"><br>
-        <label>Contraseña:</label><input type="password" name="contrasena"><br>
-        <label>Repetir contraseña:</label><input type="password" name="rep_contrasena"><br>
-        <input type="submit" value="Registrar usuario">
+        <fieldset>
+            <legend>Registro de usuario</legend>
+            <label>Nombres:</label><br>
+            <input type="text" name="nombres"><br><br>
+            <label>Apellidos:</label><br>
+            <input type="text" name="apellidos"><br><br>
+            <label>Correo:</label><br>
+            <input type="email" name="email"><br><br>
+            <label>Fecha de nacimiento:</label><br>
+            <input type="date" name="nacimiento"><br><br>
+            <label>Teléfono:</label><br>
+            <input type="tel" name="telefono"><br><br>
+            <label>Usuario:</label><br>
+            <input type="text" name="usuario"><br><br>
+            <label>Contraseña:</label><br>
+            <input type="password" name="contrasena"><br><br>
+            <label>Repetir contraseña:</label><br>
+            <input type="password" name="rep_contrasena"><br><br>
+            <input type="submit" value="Registrar usuario" id="enviar">
+        </fieldset>
     </form>
 </body>
 </html>

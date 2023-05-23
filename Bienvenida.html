@@ -12,11 +12,13 @@
     </style>
 </head>
 <body>
-    <h1 id="nombres"></h1>
-    <h2 id="apellidos"></h2>
+    <h1 id="nombres">Nombres: </h1>
+    <h2 id="apellidos">Apellidos: </h2>
+    <p>Correo electrónico:</p>
     <a id="email" href=""></a><br>
+    <p>Teléfono:</p>
     <a id="telefono" href=""></a>
-    <p id="edad"></p>
+    <p id="edad">Edad: </p>
     <script>
         getParameter = (key) => {
             address = window.location.search;
@@ -28,15 +30,15 @@
             return parameterList.get(key);
         }
 
-        document.getElementById("nombres").innerHTML = "Nombres: " + getParameter("nombres");
-        document.getElementById("apellidos").innerHTML = "Apellidos: " + getParameter("apellidos");
-        document.getElementById("email").innerHTML = "Correo electrónico: " + getParameter("email");
+        document.getElementById("nombres").innerHTML += "<br>" + getParameter("nombres");
+        document.getElementById("apellidos").innerHTML += "<br>" + getParameter("apellidos");
+        document.getElementById("email").innerHTML = getParameter("email");
         document.getElementById("email").href = "mailto:" + getParameter("email");
-        document.getElementById("telefono").innerHTML = "Teléfono: " + getParameter("telefono");
+        document.getElementById("telefono").innerHTML = getParameter("telefono");
         document.getElementById("telefono").href = "tel:" + getParameter("telefono");
 
         var nac_split = getParameter("nacimiento").split('-');
-        document.getElementById("edad").innerHTML = "Edad: " + (2023 - nac_split[0]);
+        document.getElementById("edad").innerHTML += "<br>" + (2023 - nac_split[0]);
 
         if (getParameter("contrasena").length < 5) {
             alert("Su contraseña es insegura");
