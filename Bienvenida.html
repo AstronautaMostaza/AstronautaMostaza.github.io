@@ -37,8 +37,9 @@
         document.getElementById("telefono").innerHTML = getParameter("telefono");
         document.getElementById("telefono").href = "tel:" + getParameter("telefono");
 
+        var act_split = Date().split(" ");
         var nac_split = getParameter("nacimiento").split('-');
-        document.getElementById("edad").innerHTML += "<br>" + (2023 - nac_split[0]);
+        document.getElementById("edad").innerHTML += "<br>" + (act_split[3] - nac_split[0]);
 
         if (getParameter("contrasena").length < 5) {
             alert("Su contraseña es insegura");
